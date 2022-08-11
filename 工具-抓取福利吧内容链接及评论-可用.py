@@ -56,7 +56,9 @@ for j in range(1,26):
         html_1 = res_1.read().decode('utf-8')
         soup_1 = BeautifulSoup(html_1, 'lxml')
         soup_content = soup_1.find('article', class_ ='article-content')
+
         soup_urls = soup_1.find('article', class_ ='article-content')
+
         soup_comment = soup_1.find('ol', class_ ='commentlist')
         # print ('soup_content:-----------', soup_content)
         # comments = soup_content.get_text()
@@ -91,8 +93,10 @@ for j in range(1,26):
             # else:
             #     continue
 
+
         get_content()
         get_url()
+
         get_comment()
 
     except OSError:
